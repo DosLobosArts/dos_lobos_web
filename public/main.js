@@ -7,6 +7,8 @@ const numeroComprasElement = document.querySelector(".numero_compras");
 let productosComprados = [];
 let productos = [];
 
+//** PRODUCTOS */
+
 async function inicializarArrays() {
   const response = await fetch(`/productos/`);
   const productos = await response.json();
@@ -52,8 +54,8 @@ async function cargarProductosTodos() {
       <img class="producto_imagen" src="${producto.imagen}" alt="${producto.titulo}">
       <div class="producto_info">
         <h3>${producto.titulo}</h3>
-        <p>${producto.precio}</p>
-        <button id="${producto.id}" class="producto_agregar" onclick="agregarAlCarrito(${producto.id})")>Agregar</button>
+        <p>$${producto.precio}</p>
+        <button id="${producto.id}" class="producto_agregar" onclick="agregarAlCarrito(${producto.id})")>Comprar</button>
       </div>
     `;
     contenedorProductos.append(div);
@@ -62,7 +64,7 @@ async function cargarProductosTodos() {
   });
 }
 
-async function cargarProductosPorCategoria(categoria){
+async function cargarProductosPorCategoria(categoria) {
   const productos = await obtenerProductosPorCategoria(categoria);
   productos.forEach((producto) => {
     const div = document.createElement("div");
@@ -71,8 +73,8 @@ async function cargarProductosPorCategoria(categoria){
       <img class="producto_imagen" src="${producto.imagen}" alt="${producto.titulo}">
       <div class="producto_info">
         <h3>${producto.titulo}</h3>
-        <p>${producto.precio}</p>
-        <button id="${producto.id}" class="producto_agregar" onclick="agregarAlCarrito(${producto.id})")>Agregar</button>
+        <p>$${producto.precio}</p>
+        <button id="${producto.id}" class="producto_agregar" onclick="agregarAlCarrito(${producto.id})")>Comprar</button>
       </div>
     `;
     contenedorProductos.append(div);
@@ -94,28 +96,46 @@ botonesCategorias.forEach((boton) => {
   });
 });
 
-/*function botonesActualizar() {
-  botonesAgregar = document.querySelectorAll(".producto_agregar");
-}
-
-function botonesEventoAgregarCarrito(){
-  botonesAgregar.forEach((boton) => {
-    boton.addEventListener("click", agregarAlCarrito);
-  });
-}*/
-
 async function agregarAlCarrito(idProducto) {
-
   productosComprados[idProducto] += 1;
   actualizarNumeroCompras();
-  console.log('Array de productosComprados: ', productosComprados);
+  console.log("Array de productosComprados: ", productosComprados);
 }
 
 function actualizarNumeroCompras() {
   const totalCompras = productosComprados.reduce((acc, curr) => acc + curr, 0);
-  const numeroComprasElement = document.querySelector('.numero_compras');
+  const numeroComprasElement = document.querySelector(".numero_compras");
   numeroComprasElement.textContent = totalCompras;
 }
+
+//* MODAL */
+
+const imagenesProducto = document.querySelectorAll(".producto_imagen");
+const modal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".modal_close");
+
+function openModal(src) {
+  modal.style.display = "flex";
+  modalImage.src = src;
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+imagenesProducto.forEach((item) => {
+  item.addEventListener("click", () => openModal(item.src));
+});
+
+closeBtn.addEventListener("click", closeModal);
+
+// Cierra el modal cuando se hace clic fuera de la imagen
+window.addEventListener("click", function (event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+});
 
 inicializarArrays();
 cargarProductosTodos();
