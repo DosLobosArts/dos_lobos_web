@@ -55,7 +55,10 @@ async function cargarProductosTodos() {
       <div class="producto_info">
         <h3>${producto.titulo}</h3>
         <p>$${producto.precio}</p>
-        <button id="${producto.id}" class="producto_agregar" onclick="agregarAlCarrito(${producto.id})")>Comprar</button>
+        <button id="${producto.id}" class="producto_agregar" onclick="agregarAlCarrito(${producto.id})")>
+          <span class="texto_producto_agregar">Comprar</span>
+          <span class="texto_hover">Proximamente...</span>
+        </button>
       </div>
     `;
     contenedorProductos.append(div);
