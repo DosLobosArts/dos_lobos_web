@@ -39,6 +39,7 @@ body {
   margin: 0;
   display: grid;
 }
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -98,12 +99,13 @@ body {
 }
 
 .contacto p{
-    margin-left: 10px;
+    padding-left: 10px;
 }
 .contacto_items div {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 10px;
 }
 
 .menu{
@@ -382,4 +384,70 @@ a:hover {
   }
 h1 {
   font-family: AbsoluteEmpire;
+}
+.navbar_mobile {
+  display: none;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    background-color: blue;
+    margin: 0;
+  }
+  .contenedor_productos {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar_mobile{
+    height: 40px;
+    padding: 1px;
+    background-color: rgb(28, 31, 30);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Modern;
+    font-size: 10px;
+    position: static;
+  }
+  .navbar_mobile .contacto_items{
+    background-color: red;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar_mobile p{
+    padding-left: 10px;
+  }
+  .navbar_mobile .contacto_items img{
+    max-width: 20px;
+    height: auto;
+  }
+  .navbar_mobile .slogan{
+    background-color: blueviolet;
+    padding: 5px;
+    margin: 0;
+  }
+  .navbar_mobile .slogan img{
+    height: 30px;
+    width: auto;
+  }
+  .navbar_mobile .slogan h1{
+    font-size: 25px;
+  }
+  .mobile_celnums{
+    display: flex;
+    flex-direction: column;
+  }
 }

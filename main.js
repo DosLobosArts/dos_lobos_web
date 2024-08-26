@@ -75,6 +75,20 @@ productos = [
     "imagen": "./images/Pulseritas/pulse 1 ojito ovalado roja.jpg",
     "precio": "1500",
     "categoria": "pulseras"
+  },
+  {
+    "id": 11,
+    "titulo": "Pulsera 7 nudos c/ ojitos roja",
+    "imagen": "./images/Pulseritas/hilo finito 7 nudos ojo rojo.jpg",
+    "precio": "2500",
+    "categoria": "pulseras"
+  },
+  {
+    "id": 12,
+    "titulo": "Pulsera 7 nudos c/ ojitos violeta",
+    "imagen": "./images/Pulseritas/hilo finito 7 nudos ojo violeta.jpg",
+    "precio": "2500",
+    "categoria": "pulseras"
   }
 ]
 
@@ -105,7 +119,7 @@ async function mostrarProductos(categoria) {
         <p>$${producto.precio}</p>
         <button id="${producto.id}" class="producto_agregar" onclick="agregarAlCarrito(${producto.id})")>
           <span class="texto_producto_agregar">Comprar</span>
-          <span class="texto_hover">Proximamente</span>
+          <span class="texto_hover">Próximamente</span>
         </button>
       </div>
     `;
