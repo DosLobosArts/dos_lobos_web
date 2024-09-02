@@ -79,14 +79,14 @@
     {
       "id": 11,
       "titulo": "Pulsera 7 nudos c/ ojitos roja",
-      "imagen": "../images/Pulseritas/hilo finito 7 nudos ojo rojo.jpg",
+      "imagen": "../images/Pulseritas/pulse 7 nudos ojitos rojo.jpg",
       "precio": "2500",
       "categoria": "pulseras"
     },
     {
       "id": 12,
       "titulo": "Pulsera 7 nudos c/ ojitos violeta",
-      "imagen": "../images/Pulseritas/hilo finito 7 nudos ojo violeta.jpg",
+      "imagen": "../images/Pulseritas/pulse 7 nudos ojitos violeta.jpg",
       "precio": "2500",
       "categoria": "pulseras"
     }

@@ -52,6 +52,7 @@ body {
   background-color: inherit;
   padding-right: 0;
 }
+
 .slogan {
   margin-left: -15px;
   padding: 1rem;
@@ -401,53 +402,60 @@ h1 {
   main {
     background-color: blue;
     margin: 0;
-  }
-  .contenedor_productos {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    padding: 0;
   }
   .navbar {
     display: none;
   }
   .navbar_mobile{
-    height: 40px;
-    padding: 1px;
-    background-color: rgb(28, 31, 30);
     display: flex;
     flex-direction: row;
+    height: 50px;
     align-items: center;
-    justify-content: space-evenly;
-    font-family: Modern;
-    font-size: 10px;
-    position: static;
+    justify-content: space-between;
   }
-  .navbar_mobile .contacto_items{
-    background-color: red;
+
+  /* LOGO - DOS LOBOS */
+  .navbar_mobile .name_mobile{
+    gap: 10px;
     padding: 0;
-    margin: 0;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    background-color: aquamarine;
+    justify-content: space-evenly;
   }
-  .navbar_mobile p{
-    padding-left: 10px;
-  }
-  .navbar_mobile .contacto_items img{
-    max-width: 20px;
-    height: auto;
-  }
-  .navbar_mobile .slogan{
+  .navbar_mobile .icon_mobile{
+    display: flex;
+    align-items: center;
     background-color: blueviolet;
-    padding: 5px;
-    margin: 0;
   }
-  .navbar_mobile .slogan img{
-    height: 30px;
-    width: auto;
+  .navbar_mobile .h1_mobile{
+    padding: 0;
+    background-color: chocolate;
+    height: 100%;
+    font-size: large;
+    align-items: center;
+    display: flex;
   }
-  .navbar_mobile .slogan h1{
-    font-size: 25px;
+  /* MENU */
+  .navbar_mobile .menu_mobile_button{
+    display: flex;
+    align-items: center;
+    background-color: chocolate;
   }
-  .mobile_celnums{
+  /* PRODUCTOS */
+  .contenedor_productos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas múltiples */
+    gap: 10px; /* Espacio entre columnas */
+    justify-content: space-evenly;
+  }
+  .producto{
+    background-color: blueviolet;
     display: flex;
     flex-direction: column;
+    flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 100px */
+    min-width: 100px; /* Tamaño mínimo para cada columna */
+    max-width: calc(50% - 1rem); /* Cada columna ocupa un máximo del 50% del ancho, ajustando para el gap */
   }
 }
