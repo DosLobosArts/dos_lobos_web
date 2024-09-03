@@ -97,6 +97,9 @@ const botonesCategorias = document.querySelectorAll(".boton_categoria");
 const tituloPrincipal = document.querySelector("#titulo_principal");
 let botonesAgregar = document.querySelectorAll(".producto_agregar");
 const numeroComprasElement = document.querySelector(".numero_compras");
+const mobileOpenMenuBtn = document.querySelector(".menu_mobile_button")
+const mobileCloseMenuBtn = document.querySelector(".menu_mobile_close")
+let menuMobile = document.querySelector(".menu_mobile");
 
 let productosComprados = [];
 
@@ -126,6 +129,13 @@ async function mostrarProductos(categoria) {
     contenedorProductos.append(div);
   });
 }
+
+mobileOpenMenuBtn.addEventListener("click", (e) => {
+  menuMobile.style.display = 'flex';
+})
+mobileCloseMenuBtn.addEventListener("click", (e) => {
+  menuMobile.style.display = 'none';
+})
 
 botonesCategorias.forEach((boton) => {
   boton.addEventListener("click", (e) => {

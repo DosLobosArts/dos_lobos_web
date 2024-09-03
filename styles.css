@@ -389,6 +389,9 @@ h1 {
 .navbar_mobile {
   display: none;
 }
+.menu_mobile{
+  display: none;
+}
 
 /* MOBILE */
 
@@ -400,7 +403,6 @@ h1 {
   }
 
   main {
-    background-color: blue;
     margin: 0;
     padding: 0;
   }
@@ -408,6 +410,7 @@ h1 {
     display: none;
   }
   .navbar_mobile{
+    padding: 5px;
     display: flex;
     flex-direction: row;
     height: 50px;
@@ -421,29 +424,87 @@ h1 {
     padding: 0;
     display: flex;
     align-items: center;
-    background-color: aquamarine;
     justify-content: space-evenly;
   }
   .navbar_mobile .icon_mobile{
     display: flex;
     align-items: center;
-    background-color: blueviolet;
+    justify-content: center;
   }
   .navbar_mobile .h1_mobile{
     padding: 0;
-    background-color: chocolate;
     height: 100%;
-    font-size: large;
+    font-size: x-large;
     align-items: center;
-    display: flex;
+    justify-content: center;
   }
   /* MENU */
   .navbar_mobile .menu_mobile_button{
     display: flex;
     align-items: center;
-    background-color: chocolate;
   }
+  .menu_mobile {
+    background-color: rgb(61,58,53);
+    position: fixed;
+    flex-direction: column;
+    z-index: 10000;
+    display: none;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .menu_mobile .menu_mobile_close{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .menu_mobile .menu_mobile_close button{
+    font-size: xx-large;
+    border: 0;
+    background-color: transparent;
+    color: white;
+  }
+
+  .menu_mobile .menu_mobile_item{
+    font-size: xx-large;
+    background: none;   
+    border: none;        
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+  }
+
+  .menu_mobile .menu_mobile_container{
+    gap: 3px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu_mobile .menu_mobile_container li{
+    justify-content: center;
+    display: flex;
+  }
+
+  .menu_mobile .active{
+    display: flex;
+  }
+
   /* PRODUCTOS */
+  
+  .productos_titulo {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
   .contenedor_productos {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas múltiples */
@@ -451,7 +512,6 @@ h1 {
     justify-content: space-evenly;
   }
   .producto{
-    background-color: blueviolet;
     display: flex;
     flex-direction: column;
     flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 100px */
