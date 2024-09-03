@@ -1,5 +1,5 @@
 productos = [
-  {
+  {//PULSERAS
     "id": 0,
     "titulo": "Pulsera 7 nudos hilo fino roja",
     "imagen": "./images/Pulseritas/pulse finita 7 nudos roja.jpg",
@@ -89,7 +89,94 @@ productos = [
     "imagen": "./images/Pulseritas/pulse 7 nudos ojitos violeta.jpg",
     "precio": "2500",
     "categoria": "pulseras"
-  }
+  },
+  {
+    "id": 13,
+    "titulo": "Pulsera macramé de hilo chino roja",
+    "imagen": "./images/Pulseritas/pulse macrame chino rojo.jpg",
+    "precio": "2000",
+    "categoria": "pulseras" 
+  },
+  {
+    "id": 14,
+    "titulo": "Pulsera macramé de hilo chino violeta",
+    "imagen": "./images/Pulseritas/pulse macrame chino violeta.jpg",
+    "precio": "2000",
+    "categoria": "pulseras" 
+  },
+  {
+   "id": 15,
+    "titulo": "Pulsera de cristales c/ ojito roja",
+    "imagen": "./images/Pulseritas/pulse cristal corazon ojito roja.jpg",
+    "precio": "2500",
+    "categoria": "pulseras" 
+  },
+  {
+    "id": 16,
+     "titulo": "Pulsera de cristales c/ corazones roja",
+     "imagen": "./images/Pulseritas/pulse cristal corazon roja.jpg",
+     "precio": "2500",
+     "categoria": "pulseras" 
+  },
+  {
+    "id": 17,
+     "titulo": "Pulsera de perlas c/ corazones blanca",
+     "imagen": "./images/Pulseritas/pulse perlas corazon blanco.jpg",
+     "precio": "2500",
+     "categoria": "pulseras" 
+   },
+   
+   //COLLARES
+
+   {
+    "id": 18,
+    "titulo": "Collar llave San Benito chica",
+    "imagen": "./images/Collares/collar llave chica.jpg",
+    "precio": "2500",
+    "categoria": "collares" 
+  },
+  {
+    "id": 19,
+    "titulo": "Collar llave San Benito grande",
+    "imagen": "./images/Collares/collar llave grande.jpg",
+    "precio": "3000",
+    "categoria": "collares" 
+  },
+  {
+    "id": 20,
+    "titulo": "Collar nudo de bruja chico",
+    "imagen": "./images/Collares/collar nudo bruja chico.jpg",
+    "precio": "2500",
+    "categoria": "collares" 
+  },
+  {
+    "id": 21,
+    "titulo": "Collar nudo de bruja grande",
+    "imagen": "./images/Collares/collar nudo bruja grande.jpg",
+    "precio": "3000",
+    "categoria": "collares" 
+  },
+  {
+    "id": 22,
+    "titulo": "Collar de perlas blanco",
+    "imagen": "./images/Collares/collar perlas blanco.jpg",
+    "precio": "2500",
+    "categoria": "collares" 
+  },
+  {
+    "id": 23,
+    "titulo": "Collar de perlas negro",
+    "imagen": "./images/Collares/collar perlas negro.jpg",
+    "precio": "2500",
+    "categoria": "collares" 
+  },
+  {
+    "id": 24,
+    "titulo": "Collar rosa San Expedito",
+    "imagen": "./images/Collares/collar rosa san expe.jpg",
+    "precio": "3000",
+    "categoria": "collares" 
+  },
 ]
 
 const contenedorProductos = document.querySelector("#contenedor_productos");
